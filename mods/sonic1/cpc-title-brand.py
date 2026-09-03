@@ -28,7 +28,7 @@ ROUTINE = r'''
 ; GM_Title already loads into VRAM (Art_Text), so it needs no new artwork.
 ; Foreground plane (static, doesn't scroll with the water), bottom row, centred.
 ; ---------------------------------------------------------------------------
-CPC_brand_vram:	equ vram_fg+(7<<7)+(29<<1)		; fg nametable slot: row 7, col 29 -- upper-right sky, right of Sonic's spikes/finger (was row 26/col 17, over the busy sea)
+CPC_brand_vram:	equ vram_fg+(4<<7)+(8<<1)		; fg nametable slot: row 4, col 8 -- the clear blue-sky pocket upper-left of Sonic (clear of the white emblem wings and the clouds, where light text actually reads)
 
 CPC_TitleBrand:
 		lea	(vdp_data_port).l,a6			; a6 = VDP data port (tiles get written here)
