@@ -10,7 +10,8 @@ DIST="$HERE/dist"                            # disposable build tree (gitignored
 mkdir -p "$DIST"
 rsync -a --delete --exclude='.git' "$BASE/" "$DIST/"
 cp -R "$HERE/overlay/." "$DIST/"
-python3 "$HERE/../cpc-title-brand.py" "$DIST/sonic.asm"   # "BY CPC" on the title screen (shared; picker hides it here, kept for parity)
+# No title-screen "BY CPC" here: this mod boots straight to the picker (which already
+# prints "BY CPC"), and stamping it would land on the picker's first menu line.
 
 # Spawn Green Hill 3 right at the boss so the fight (and the screen lock) start on
 # load. X=$2A00 clamps the camera to the $2960 trigger; Y=$03B0 is the ground line.
