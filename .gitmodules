@@ -1,0 +1,9 @@
+[submodule "mods/sonic1/s1disasm"]
+	path = mods/sonic1/s1disasm
+	url = https://github.com/consolesplayingconsoles/s1disasm.git
+[submodule "mods/sonic2/s2disasm"]
+	path = mods/sonic2/s2disasm
+	url = https://github.com/consolesplayingconsoles/s2disasm
+[submodule "mods/sonic3/skdisasm"]
+	path = mods/sonic3/skdisasm
+	url = https://github.com/consolesplayingconsoles/skdisasm.git

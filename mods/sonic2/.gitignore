@@ -1,0 +1,4 @@
+# sonic2's build drops its ROM + checksum at the mod root (not in rom/).
+# dist/ and rom/ are covered by the root .gitignore.
+*.bin
+*.md5

@@ -1,0 +1,23 @@
+# Build outputs -- every mod builds into its own dist/ (a disposable copy of the
+# base disassembly/SDK) and drops the finished ROM in rom/. These match at any depth,
+# so this one rule covers every mod (no per-mod .gitignore needed).
+dist/
+rom/
+__pycache__/
+
+# SGDK build output -- regenerate with the docker build (see README.md)
+*/*/out/
+
+# rescomp-generated from res/*.res at build time (not source)
+*/*/res/*.h
+*/*/res/*.rs
+
+# SGDK-generated boot stubs (created into src/boot/ by makefile.gen at build)
+*/src/boot/
+
+# raw third-party CC0 asset packs (downloaded; the derived res/*.png IS committed)
+*/*/assets/
+*.zip
+
+# editor
+.idea/
