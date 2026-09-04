@@ -11,6 +11,7 @@ mkdir -p "$DIST"
 rsync -a --delete --exclude='.git' "$BASE/" "$DIST/"
 cp -R "$HERE/overlay/." "$DIST/"
 python3 "$HERE/../cpc-title-brand.py" "$DIST/sonic.asm"   # "BY CPC" on the title screen (shared)
+python3 "$HERE/monitor_island.py" "$DIST/objpos/ghz1.bin" # meme: floating Sonic-face grid above GHZ1 start
 
 ( cd "$DIST" && lua build.lua ) >/dev/null
 

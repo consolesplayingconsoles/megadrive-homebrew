@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build "Sonic 3 Heroes" — C hot-swaps the playable character, mid-level.
+# Build "Sonic 3 Hyper Swap" — C hot-swaps the playable character, mid-level.
 #
 # Button scheme: A/B jump, C swaps. Vanilla S3&K maps all three of A/B/C to
 # jump, which is why Sonic 2 forced us onto Start - but we have the source, so
@@ -97,7 +97,7 @@ if anchor not in content:
     sys.exit("PATCH FAILED: Level_started_flag init not found")
 
 grant = (
-    "; Sonic 3 Heroes - subsidise Super: hand over the emeralds and a ring float\n"
+    "; Sonic 3 Hyper Swap - subsidise Super: hand over the emeralds and a ring float\n"
     "; so the vanilla cost checks pass untouched. Chaos, NOT Super, emeralds, or\n"
     "; Sonic_Transform would resolve to Hyper.\n"
     "\t\tmove.b\t#7,(Chaos_emerald_count).w\n"
@@ -161,7 +161,7 @@ for i, line in enumerate(lines[:-1]):
         nxt = lines[i + 1]
         if "bpl.w" in nxt:
             lines[i + 1] = nxt.replace("bpl.w", "bra.w").split(";")[0].rstrip() \
-                + "\t; Sonic 3 Heroes: never drain rings, never revert\n"
+                + "\t; Sonic 3 Hyper Swap: never drain rings, never revert\n"
             hits += 1
 
 if hits == 0:
@@ -196,7 +196,7 @@ if idx < 0:
     sys.exit("PATCH FAILED: SonicKnux_SuperHyper .continued not found")
 
 toggle = (
-    "; Sonic 3 Heroes - press B in the air to drop Super again.\n"
+    "; Sonic 3 Hyper Swap - press B in the air to drop Super again.\n"
     "; Another routine jumps straight into .continued (bypassing the Super check\n"
     "; at the top of this function), so re-test the flag here. Without it this\n"
     "; intercepted the very B press that transforms you and sent it to\n"
@@ -459,7 +459,7 @@ marker = (
 # + label. Widen it, since our block pushes its target out of short range.
 replacement = (
     "\t\tbne.w\t+\n"
-    "; Sonic 3 Heroes - C hot-swaps the playable character. Gameplay only:\n"
+    "; Sonic 3 Hyper Swap - C hot-swaps the playable character. Gameplay only:\n"
     "; Game_mode $C is normal play (8 = demo), and Level_started_flag excludes\n"
     "; the AIZ plane intro, where Player_1 already holds Obj_Sonic.\n"
     "\t\tcmpi.b\t#$C,(Game_mode).w\n"
@@ -598,7 +598,7 @@ with open(path) as f:
     content = f.read()
 
 OLD = '"SONIC & KNUCKLES                                "'
-NEW = '"SONIC 3 HEROES - SWAP MOD BY CPC                "'
+NEW = '"SONIC 3 HYPER SWAP BY CPC                       "'
 
 assert len(OLD) == len(NEW), "header fields are fixed width"
 
@@ -631,7 +631,7 @@ if anchor not in content:
     sys.exit("PATCH FAILED: Obj_TitleCopyright not found")
 
 obj = (
-    "\n; Sonic 3 Heroes - CPC credit, built from the title screen's own letters.\n"
+    "\n; Sonic 3 Hyper Swap - CPC credit, built from the title screen's own letters.\n"
     "S3H_Obj_CPC:\n"
     "\t\tmove.l\t#S3H_Map_CPC,mappings(a0)\n"
     "\t\tmove.w\t#make_art_tile($680,3,1),art_tile(a0)\n"
@@ -708,6 +708,6 @@ PYCHEATS
 ( cd "$DIST" && lua buildS3Complete.lua ) >/dev/null
 
 mkdir -p "$HERE/rom"
-ROM="$HERE/rom/sonic3-heroes.bin"
+ROM="$HERE/rom/sonic3-hyper-swap.bin"
 cp "$DIST/sonic3k.bin" "$ROM"
 echo "built: $ROM ($(wc -c < "$ROM") bytes)"
