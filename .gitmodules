@@ -10,3 +10,6 @@
 [submodule "mods/dbz/dbzbr-disasm"]
 	path = mods/dbz/dbzbr-disasm
 	url = https://github.com/consolesplayingconsoles/dbzbr-disasm.git
+[submodule "mods/toystory/toystory-disasm"]
+	path = mods/toystory/toystory-disasm
+	url = https://github.com/consolesplayingconsoles/toystory-disasm.git
