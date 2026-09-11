@@ -53,3 +53,13 @@ mods can't collide.
 Tip to capture an overlay from a working `dist/`: `git -C dist status` (the base
 is a git repo, so it lists exactly what you changed) — copy those paths into
 `overlay/`.
+
+## Planned
+
+- **Light-gun mod** — shoot anything on screen: Tails endlessly (he just respawns),
+  plus enemies, monitors, and Sonic himself. Input is a **Konami Justifier**, a
+  native Mega Drive light gun read via the VDP H/V-counter latch, so it needs a CRT.
+  Build order: first a throwaway crosshair test ROM to prove aim tracking and
+  calibration standalone, then wire the hit-test and each object's existing
+  death/explode routine into a mod here. The damage is the easy part; the gun input
+  is the real work.
