@@ -35,4 +35,5 @@ docker run --rm -v "$dir":/src ghcr.io/stephane-d/sgdk
 
 cp "$dir/out/rom.bin" "$dir/out/$out"
 echo "built: $rom/out/$out"
+echo "##OUTPUT:$dir/out/$out"
 ls -la "$dir/out/$out"

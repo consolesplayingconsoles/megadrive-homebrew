@@ -1,4 +1,4 @@
-# datalink — Mega Drive data channel
+# datalink: Mega Drive data channel
 
 Repurposes the console's controller port as a parallel data bus so a Pico can
 stream data into a running ROM. Port 2 is the permanent data port (port 1 stays
