@@ -43,3 +43,12 @@ those builds need).
 
 Each subproject documents itself: [games/room](games/room),
 [mods/sonic1](mods/sonic1), [tools/datalink](tools/datalink).
+
+---
+
+## See it in action
+
+See what games and mods Pluto has helped me build for the Mega Drive, with gameplay on real hardware:
+
+- 📸 **Instagram:** [@consolesplayingconsoles](https://www.instagram.com/consolesplayingconsoles/)
+- 🔗 **Everything else:** [beacons.ai/consolesplayingconsoles](https://beacons.ai/consolesplayingconsoles)
