@@ -52,3 +52,9 @@ See what games and mods Pluto has helped me build for the Mega Drive, with gamep
 
 - 📸 **Instagram:** [@consolesplayingconsoles](https://www.instagram.com/consolesplayingconsoles/)
 - 🔗 **Everything else:** [beacons.ai/consolesplayingconsoles](https://beacons.ai/consolesplayingconsoles)
+
+## License
+
+© 2026 consolesplayingconsoles. Free software under the **GNU General Public License v3.0 or later** ([GPL-3.0-or-later](LICENSE)): use it, study it, share it, modify it. Derivative works stay under the same licence, so what gets built on this stays open too.
+
+This covers the code, tools and patches in this repo. It does not cover the original games, which are not included, or submodules, which keep their own licences.
